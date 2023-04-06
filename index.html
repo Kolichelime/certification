@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CERTIFICATE OF COMPLETION</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			line-height: 1.5;
+			background-color: #f5f5f5;
+			
+			padding: 30px;
+		}
+
+		h1 {
+			font-size: 35px;
+			
+			color: #2c3e50;
+			margin-bottom: 30px;
+			text-align:center;
+			font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			margin-top: 50px;
+			margin-bottom: 10px;
+		}
+		strong {
+			text-decoration: underline;
+    			text-decoration-color: rgb(161, 105, 9);
+		}
+
+		p {
+			margin-bottom: 20px;
+			color: #333;
+			text-align: center;
+		}
+
+		.certificate {
+			background-color: #fefefe7f;
+			padding: 30px;
+			background-image: url('https://png.pngtree.com/png-vector/20230223/ourmid/pngtree-certificate-border-with-elegant-blue-and-gold-color-png-image_6587283.png');
+  			background-size:700px;
+			background-repeat: no-repeat;
+			box-shadow: 0 0 20px rgba(0,0,0,0.2);
+			max-width: 600px;;
+			height: 400px;
+			
+			position: relative;
+		}
+
+		.recipient {
+			font-size: 24px;
+			color: #2c3e50;
+			margin-bottom: 30px;
+		}
+
+		.course {
+			font-size: 18px;
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		.date {
+			font-size: 16px;
+			color: #333;
+			margin-bottom: 20px;
+		}
+                .logo {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			max-width: 100px;
+			margin-bottom: 20px;
+			margin-right: 40px;
+		}
+		.logo-left {
+			position: absolute;
+			bottom: 20px;
+			left: 40px;
+			background-image: url('https://brillium-www-public.s3.amazonaws.com/Support-Resources/blank-certs/Brillium%20A4%20Certificate-Alt-Blue-Blank.png');
+			background-repeat: no-repeat;
+			max-width: 550px;
+			margin-bottom: 20px;
+		}
+		.certificate-content {
+			background-image: url(certificate1.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			}
+	</style>
+</head>
+<body>
+	<div class="certificate">
+      	<img src="bytexl-logo.png" alt="ByteXL Logo" class="logo">
+		<img src="logo1.jpg" alt="Logo" class="logo-left">
+
+		<h1 id="certificateTitle">CERTIFICATE OF COMPLETION</h1>
+		<p>THIS CERTIFICATE IS AWARDED TO</p>
+		<p class="recipient"><strong id="recipientName"></strong></p>
+		<p>From 3rd year B.Tech 1st Sem,Computer Science and Engineering for successfully completing the Skill Oriented Course in "Java Programming"conducted by byteXL with <span id="grade"></span> Grade</p>
+	</div>
+	<script>
+		// Get the values of the query parameters from the URL
+		const urlParams = new URLSearchParams(window.location.search);
+		const recipientName = urlParams.get('recipientName');
+		const grade = urlParams.get('grade');
+
+		// Set the values of the HTML elements using the retrieved parameter values
+		document.getElementById("recipientName").innerHTML = recipientName;
+		document.getElementById("grade").innerHTML = grade;
+	</script>
+</body>
+</html>
